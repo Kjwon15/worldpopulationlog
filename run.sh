@@ -16,3 +16,5 @@ git checkout log
 git merge master --no-edit
 git mv ${date}.* ${date}.${month}
 git commit --author="$GIT_COMMITER_NAME <$GIT_COMMITER_EMAIL>" -am "$population"
+git push origin log
+git checkout master
