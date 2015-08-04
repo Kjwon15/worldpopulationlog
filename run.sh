@@ -9,5 +9,7 @@ population=$(\
     cut -d: -f4 |\
     tr -d '[[:space:]]}')
 
+git checkout log
+git merge master
 mv ${date}.* ${date}.${month}
-echo $population
+git commit -am "$population"
