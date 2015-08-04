@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export GIT_COMMITER_NAME='autocommit'
+export GIT_COMMITER_EMAIL='mail@802.11ac.net'
+
 export LC_TIME=en_US.UTF-8
 date=$(date +%d)
 month=$(date +%B)
@@ -9,5 +12,7 @@ population=$(\
     cut -d: -f4 |\
     tr -d '[[:space:]]}')
 
-mv ${date}.* ${date}.${month}
-echo $population
+git checkout log
+git merge master --no-edit
+git mv ${date}.* ${date}.${month}
+git commit --author="$GIT_COMMITER_NAME <$GIT_COMMITER_EMAIL>" -am "$population"
