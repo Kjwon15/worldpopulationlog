@@ -11,5 +11,5 @@ population=$(\
 
 git checkout log
 git merge master --no-edit
-mv ${date}.* ${date}.${month}
+git mv ${date}.* ${date}.${month}
 git commit -am "$population"
