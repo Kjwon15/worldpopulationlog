@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export GIT_COMMITER_NAME='autocommit'
-export GIT_COMMITER_EMAIL='mail@802.11ac.net'
+export GIT_COMMITER_EMAIL='autocommit@802.11ac.net'
 
 export LC_TIME=en_US.UTF-8
 date=$(date +%d)
